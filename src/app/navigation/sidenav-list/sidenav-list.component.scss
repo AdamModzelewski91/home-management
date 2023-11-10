@@ -1,0 +1,50 @@
+:host {
+  display: flex;
+  height: 100%;
+}
+
+mat-nav-list{
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+mat-list-item {
+  padding-right: 0;
+  display: flex;
+  flex-direction: column;
+
+  mat-icon {
+    font-size: 40px;
+    height: 50px;
+    width: 50px;
+
+    &.active-link {
+      color: blueviolet;
+    }
+  }
+  span {
+    font-size: 12px;
+
+    &.active-link {
+      color: blueviolet;
+    }
+  }
+}
+
+.mdc-list-item--with-leading-icon .mdc-list-item__start{
+  margin-bottom: 16px;
+}
+
+.mat-mdc-list-item.mdc-list-item--with-leading-icon.mdc-list-item--with-one-line{
+  height: 64px;
+}
+
+

@@ -1,0 +1,31 @@
+<div class="gauge">
+  <input type="range" min="0" max="60" value="0" step="1" [ngModel]="digit()" (change)="onDigitChange($any($event.target).value)">
+  <div class="gauge-outer" #outer (click)="onDigitChange($any($event.target).id)">
+    <ng-container *ngFor="let ed of data(); let i = index">
+      <i class="bar"  [style]="
+        '-webkit-transform: rotate('+ed.degree+'deg);'+
+        '-moz-transform: rotate('+ed.degree+'deg);'+
+        '-ms-transform: rotate('+ed.degree+'deg);'+
+        '-o-transform: rotate('+ed.degree+'deg);'+
+        'transform: rotate('+ed.degree+'deg);'
+      " [id]="i">
+      </i>
+      <i class="bar" *ngIf="i < digit()/(max()/points())" [style]="
+      '-webkit-transform: rotate('+ed.degree+'deg);'+
+      '-moz-transform: rotate('+ed.degree+'deg);'+
+      '-ms-transform: rotate('+ed.degree+'deg);'+
+      '-o-transform: rotate('+ed.degree+'deg);'+
+      'transform: rotate('+ed.degree+'deg);'+
+      'background-color: hsl('+ed.hsl+', 92%, 64%);'
+    " [id]="i">
+    </i>
+    </ng-container>
+  </div>
+  <div class="gauge-inner" >
+    <div *ngFor="let ed of data()">
+      <i class="bar" [style]="'transform: rotate('+ed.degree+'deg)'"></i>
+      <i class="bar peak" *ngIf="ed.isPeak" [style]="'transform: rotate('+ed.degree+'deg)'"></i>
+    </div>
+  </div>
+  <div class="gauge-digits">{{digit()}} °</div>
+</div>

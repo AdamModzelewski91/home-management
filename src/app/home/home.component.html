@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="container__left">
+    <div class="welcome">
+      <h1><strong>Welcome home,</strong> Joe!</h1>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim laudantium nemo dolorem repellat, a voluptas possimus accusantium consequatur illum laborum officiis nobis eligendi, nulla modi.</p>
+      <div style="display: flex; gap: 5px;">
+        <h2>+30°C</h2>
+        <mat-icon aria-hidden="false" fontIcon="filter_drama"></mat-icon>
+      </div>
+      <h3><strong>Outdoor temperatur</strong></h3>
+      <p>Fuzzy cloudy weather</p>
+    </div>
+    <div class="shorts">
+      <div class="shortcuts">
+        <div class="shortcuts__header">
+          <h3><strong>Shortcuts</strong></h3>
+          <mat-icon aria-hidden="false" fontIcon="expand_more"></mat-icon>
+        </div>
+        <div class="shortcuts__body">
+          <app-small-widget title="Temperature" subtitle="25°C" iconName="device_thermostat"></app-small-widget>
+          <app-small-widget title="Wifi" subtitle="1 Gb/s" iconName="wifi"></app-small-widget>
+          <app-small-widget title="Light" subtitle="4/10" iconName="wb_incandescent"></app-small-widget>
+        </div>
+      </div>
+      <div class="devices">
+        <div class="devices__header">
+          <h3><strong>Devices</strong></h3>
+          <mat-icon aria-hidden="false" fontIcon="expand_more"></mat-icon>
+        </div>
+        <div class="devices__body">
+          <app-small-widget title="Smart TV" iconName="connected_tv"></app-small-widget>
+          <app-small-widget title="Radio" iconName="radio"></app-small-widget>
+          <app-small-widget title="Fridge" iconName="kitchen"></app-small-widget>
+        </div>
+      </div>
+    </div>
+    <div class="stats">
+      <app-temperature></app-temperature>
+      <hr>
+      <app-consumption></app-consumption>
+    </div>
+  </div>
+  <div class="container__right">
+    <div>
+      <h2>Rooms</h2>
+      <p>Master bed room</p>
+    </div>
+  </div>
+
+</div>

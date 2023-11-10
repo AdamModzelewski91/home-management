@@ -1,0 +1,22 @@
+:host{
+  position: absolute;
+  right: 0;
+  width: 400px;
+  text-align: right;
+  margin-right: 10px;
+}
+
+.container {
+  display: flex;
+  gap: 10px;
+  justify-content: end;
+
+  a {
+    cursor: pointer;
+    transition: 0.3s ease;
+
+    &:hover {
+      color: blueviolet;
+    }
+  }
+}
