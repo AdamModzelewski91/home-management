@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 import { UserProfileService } from './core/user-profile.service';
 
@@ -15,8 +16,7 @@ import { HomeComponent } from './home/home.component';
 import { SmallWidgetComponent } from './shared/small-widget/small-widget.component';
 import { TemperatureComponent } from './home/temperature/temperature.component';
 import { ConsumptionComponent } from './home/consumption/consumption.component';
-import { FormsModule } from '@angular/forms';
-
+import { NgxEchartsModule } from 'ngx-echarts';
 
 @NgModule({
   declarations: [
@@ -35,6 +35,9 @@ import { FormsModule } from '@angular/forms';
     RouterModule,
     AppRoutingModule,
     FormsModule,
+    NgxEchartsModule.forRoot({
+      echarts: () => import('echarts')
+    })
   ],
   providers: [UserProfileService],
   bootstrap: [AppComponent]
